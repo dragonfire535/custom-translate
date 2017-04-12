@@ -1,0 +1,23 @@
+{
+  "name": "custom-translate",
+  "version": "1.0.0",
+  "description": "A simple module for translating certain words or letters in a string with other words or letters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonfire535/custom-translate.git"
+  },
+  "keywords": [
+    "translate",
+    "translator"
+  ],
+  "author": "dragonfire535",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dragonfire535/custom-translate/issues"
+  },
+  "homepage": "https://github.com/dragonfire535/custom-translate#readme"
+}
