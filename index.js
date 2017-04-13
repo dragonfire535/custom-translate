@@ -2,11 +2,11 @@ module.exports.wordTrans = (text, words) => {
     text = text.split(' ');
     let translation = [];
     for (let i = 0; i < text.length; i++) {
-        const word = text[i].toLowerCase();
-        const wordPuncStrip = word.replace(/[\[\\^$.|?*+()\]]/g, '');
+        let word = text[i];
+        const wordPuncStrip = word.replace(/[\[\\^$.|?*+()\]]/g, '').toLowerCase();
         if (words[wordPuncStrip]) {
-            const reg = new RegExp(wordPuncStrip, 'gi');
-            translation.push(word.replace(reg, words[wordPuncStrip]));
+            word = word.toLowerCase();
+            translation.push(word.replace(wordPuncStrip, words[wordPuncStrip]));
         }
         else {
             translation.push(word);
