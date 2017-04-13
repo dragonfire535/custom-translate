@@ -25,7 +25,7 @@ const translator = require('custom-translate');
 const text = 'I like cheese.';
 const dictionary = {
 	"c": "!",
-	"i": "5"
+	"i": "S"
 };
 
 translator.letterTrans(text, dictionary);
