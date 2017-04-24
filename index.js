@@ -3,12 +3,11 @@ module.exports.wordTrans = (text, words) => {
     let translation = [];
     for (let i = 0; i < text.length; i++) {
         let word = text[i];
-        const wordPuncStrip = word.replace(/[\[\\^$.|?*+()\]]/g, '').toLowerCase();
+        const wordPuncStrip = word.replace(/[\[\\^$.,:;|!?%#@"'*+()\]]/g, '').toLowerCase();
         if (words[wordPuncStrip]) {
             word = word.toLowerCase();
             translation.push(word.replace(wordPuncStrip, words[wordPuncStrip]));
-        }
-        else {
+        } else {
             translation.push(word);
         }
     }
@@ -22,8 +21,7 @@ module.exports.letterTrans = (text, letters, joinWith) => {
         const letter = text[i];
         if (letters[letter]) {
             translation.push(letters[letter]);
-        }
-        else {
+        } else {
             translation.push(letter);
         }
     }
