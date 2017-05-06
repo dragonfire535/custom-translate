@@ -40,8 +40,9 @@ Output will be:
 
 Unlike `wordTrans`, `letterTrans` does not ignore casing by default.
 
-When using `letterTrans`, you can also optionally specify what to join the string back together with. This defaults to `''`.
+You can also specify what to join the string back together with. This defaults to `''` for `letterTrans` and `' '` for `wordTrans`.
 
 ```js
 translator.letterTrans(text, dictionary, ' ');
+translator.wordTrans(text, dictionary, ', ');
 ```

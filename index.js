@@ -1,14 +1,14 @@
-module.exports.wordTrans = (text, words) => {
+module.exports.wordTrans = (text, words, joinWith = ' ') => {
     return text.split(' ').map(word => {
         const strip = word.replace(/[\[\\^$.,:;|!?%#@"*+()\]]/g, '').toLowerCase();
         if(words[strip]) return word.toLowerCase().replace(strip, words[strip]);
         else return word;
-    }).join(' ');
+    }).join(joinWith);
 };
 
-module.exports.letterTrans = (text, letters, joinWith) => {
+module.exports.letterTrans = (text, letters, joinWith = '') => {
     return text.split('').map(letter => {
         if(letters[letter]) return letters[letter];
         else return letter;
-    }).join(joinWith || '');
+    }).join(joinWith);
 };
