@@ -1,4 +1,4 @@
-module.exports.wordTrans = (text, words, joinWith = ' ') => {
+const wordTrans = (text, words, joinWith = ' ') => {
     return text.split(' ').map(word => {
         const strip = word.replace(/[\[\\^$.,:;|!?%#@"*+()\]]/g, '').toLowerCase();
         if(words[strip]) return word.toLowerCase().replace(strip, words[strip]);
@@ -6,9 +6,17 @@ module.exports.wordTrans = (text, words, joinWith = ' ') => {
     }).join(joinWith);
 };
 
-module.exports.letterTrans = (text, letters, joinWith = '') => {
+const letterTrans = (text, letters, joinWith = '') => {
     return text.split('').map(letter => {
         if(letters[letter]) return letters[letter];
         else return letter;
     }).join(joinWith);
+};
+
+const { version } = require('./package');
+
+module.exports = {
+    wordTrans,
+    letterTrans,
+    version
 };
