@@ -1,6 +1,7 @@
 # custom-translate
 [![Downloads](https://img.shields.io/npm/dt/custom-translate.svg?maxAge=3600)](https://www.npmjs.com/package/custom-translate)
 [![Version](https://img.shields.io/npm/v/custom-translate.svg?maxAge=3600)](https://www.npmjs.com/package/custom-translate)
+[![Codacy](https://api.codacy.com/project/badge/Grade/eb8de7127ed34790a1d1fb6dcd75b8fe)](https://www.codacy.com/app/dragonfire535/custom-translate)
 [![Discord](https://discordapp.com/api/guilds/252317073814978561/embed.png)](https://discord.gg/fqQF8mc)
 
 custom-translate is a simple module for translating certain words or letters in a string with other words or letters you provide. Usage is simple:
