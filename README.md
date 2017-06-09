@@ -11,8 +11,8 @@ const translator = require('custom-translate');
 
 const text = 'I have a cow that goes moo.';
 const dictionary = {
-	"cow": "cat",
-	"moo": "meow"
+	cow: 'cat',
+	moo: 'meow'
 };
 
 translator.wordTrans(text, dictionary);
@@ -28,8 +28,8 @@ const translator = require('custom-translate');
 
 const text = 'I like cheese.';
 const dictionary = {
-	"c": "!",
-	"I": "S"
+	c: '!',
+	I: 'S'
 };
 
 translator.letterTrans(text, dictionary);

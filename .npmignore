@@ -1,0 +1,9 @@
+# Packages
+node_modules/
+
+# Log Files
+logs/
+*.log
+
+# Other
+.gitignore
