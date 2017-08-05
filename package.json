@@ -1,6 +1,6 @@
 {
   "name": "custom-translate",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "A simple module for translating certain words or letters in a string with other words or letters.",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,16 @@
   },
   "homepage": "https://github.com/dragonfire535/custom-translate#readme",
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^4.4.0",
+    "eslint-config-aqua": "^1.4.1"
+  },
+  "eslintConfig": {
+    "extends": "aqua",
+    "rules": {
+      "camelcase": "off",
+      "id-length": "off",
+      "no-await-in-loop": "off",
+      "no-console": "off"
+    }
   }
 }
