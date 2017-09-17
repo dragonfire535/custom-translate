@@ -1,3 +1,5 @@
+const { version } = require('./package');
+
 const wordTrans = (text, words, join = ' ') => text.split(' ').map(word => {
 	const strip = word.replace(/[!@#$%^&*()`~=+[\]{};:",.<>?]/g, '').toLowerCase();
 	return words[strip] ? word.toLowerCase().replace(strip, words[strip]) : word;
@@ -5,4 +7,8 @@ const wordTrans = (text, words, join = ' ') => text.split(' ').map(word => {
 
 const letterTrans = (text, letters, join = '') => text.split('').map(letter => letters[letter] || letter).join(join);
 
-module.exports = { wordTrans, letterTrans };
+module.exports = {
+	version,
+	wordTrans,
+	letterTrans
+};
