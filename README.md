@@ -23,6 +23,9 @@ Output will be:
 `wordTrans` automatically ignores casing, all instances of the word, regardless
 of case, will be replaced.
 
+Casing of the first letter will be matched, so if `cat` happened to be `Cat` in
+the `text` variable, the result would be `I have a Cow that goes moo.`.
+
 #### letterTrans
 ```js
 const translator = require('custom-translate');
