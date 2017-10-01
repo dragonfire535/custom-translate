@@ -4,7 +4,7 @@ const wordTrans = (text, dict, join = ' ') => text.split(' ').map(word => {
 	const strip = word.replace(/[!@#$%^&*()`~=+[\]{};:",.<>?]/g, '').toLowerCase();
 	if (!dict[strip]) return word;
 	let change = word.toLowerCase().replace(strip, dict[strip]);
-	if (word[0].toUpperCase() === word[0]) change = change.replace(/./, change[0].toUpperCase());
+	if (word.charAt(0).toUpperCase() === word.charAt(0)) change = change.replace(/./, change.charAt(0).toUpperCase());
 	return change;
 }).join(join);
 

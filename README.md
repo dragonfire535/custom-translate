@@ -23,8 +23,8 @@ Output will be:
 `wordTrans` automatically ignores casing, all instances of the word, regardless
 of case, will be replaced.
 
-Casing of the first letter will be matched, so if `cat` happened to be `Cat` in
-the `text` variable, the result would be `I have a Cow that goes moo.`.
+Casing of the first letter will be matched, so if `cow` happened to be `Cow` in
+the `text` variable, the result would be `I have a Cat that goes meow.`.
 
 #### letterTrans
 ```js
