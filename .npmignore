@@ -3,5 +3,6 @@ package-lock.json
 logs/
 *.log
 .gitignore
+.gitattributes
 .travis.yml
 test.js
