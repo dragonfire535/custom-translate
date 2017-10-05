@@ -4,3 +4,4 @@ logs/
 *.log
 .gitignore
 .travis.yml
+test.js
