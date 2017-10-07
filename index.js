@@ -11,6 +11,7 @@ const wordTrans = (text, dict, join = ' ') => {
 		if (strip.charAt(0).toUpperCase() === strip.charAt(0)) {
 			change = change.replace(dict[lowerCase].charAt(0), dict[lowerCase].charAt(0).toUpperCase());
 		}
+		if (strip.toUpperCase() === strip) change = change.toUpperCase();
 		return change;
 	}).join(join);
 };

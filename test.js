@@ -26,8 +26,8 @@ test('wordTrans: should work', () => {
 });
 
 test('wordTrans: should capitalize properly', () => {
-	const tested = wordTrans('This is a "Test" of the casing.', { this: 'that', test: 'testing' });
-	expect(tested).toBe('That is a "Testing" of the casing.');
+	const tested = wordTrans('This is a "Test" of the casing. A TEST.', { this: 'that', test: 'testing' });
+	expect(tested).toBe('That is a "Testing" of the casing. A TESTING.');
 });
 
 test('wordTrans: join should work', () => {
