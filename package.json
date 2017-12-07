@@ -1,6 +1,6 @@
 {
 	"name": "custom-translate",
-	"version": "2.2.1",
+	"version": "2.2.2",
 	"description": "A simple module for replacing words, letters, or patterns in a string with others.",
 	"main": "index.js",
 	"scripts": {
