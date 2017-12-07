@@ -1,6 +1,6 @@
 /* global test expect */
 
-const { wordTrans, letterTrans, version } = require('./index');
+const { wordTrans, letterTrans, regexTrans, version } = require('./index');
 
 test('wordTrans: should throw a TypeError on invalid text', () => {
 	try {
@@ -61,6 +61,29 @@ test('letterTrans: should work', () => {
 test('letterTrans: join should work', () => {
 	const tested = letterTrans('abc 123', { a: 'b', 1: '2' }, '/');
 	expect(tested).toBe('b/b/c/ /2/2/3');
+});
+
+test('regexTrans: should throw a TypeError on invalid text', () => {
+	try {
+		regexTrans(undefined, {});
+	} catch (err) {
+		expect(err.name).toBe('TypeError');
+		expect(err.message).toBe('text must be a string.');
+	}
+});
+
+test('regexTrans: should throw a TypeError on invalid dictionary', () => {
+	try {
+		regexTrans('', undefined);
+	} catch (err) {
+		expect(err.name).toBe('TypeError');
+		expect(err.message).toBe('dictionary must be an object.');
+	}
+});
+
+test('regexTrans: should work', () => {
+	const tested = regexTrans('abcd abd 123', { 'abc?d': 'efg', '[123]': 'number' });
+	expect(tested).toBe('efg efg numbernumbernumber');
 });
 
 test('version: should be right', () => {

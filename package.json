@@ -1,7 +1,7 @@
 {
 	"name": "custom-translate",
-	"version": "2.1.1",
-	"description": "A simple module for translating certain words or letters in a string with other words or letters.",
+	"version": "2.2.0",
+	"description": "A simple module for replacing words, letters, or patterns in a string with others.",
 	"main": "index.js",
 	"scripts": {
 		"test": "npm run lint && jest",
