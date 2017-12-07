@@ -6,7 +6,7 @@
 custom-translate is a simple module for translating certain words, letters, or
 patterns in a string with others. Usage is simple:
 
-### wordTrans
+## wordTrans
 wordTrans takes an object of words and changes them into others. For example:
 ```js
 const translator = require('custom-translate');
@@ -27,7 +27,7 @@ of case, will be replaced.
 Casing of the first letter will be matched, so if `cow` happened to be `Cow` in
 the `text` variable, the result would be `I have a Cat that goes meow.`.
 
-### letterTrans
+## letterTrans
 letterTrans takes an object of letters (or symbols) and changes them into
 others. For example:
 ```js
@@ -54,7 +54,7 @@ translator.letterTrans(text, dictionary, ' ');
 translator.wordTrans(text, dictionary, ', ');
 ```
 
-### regexTrans
+## regexTrans
 regexTrans takes an object with Regular Expressions (as strings) as the keys and
 what they are to be replaced with as the values. They will be replaced in order.
 For example:
