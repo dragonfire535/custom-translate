@@ -8,7 +8,7 @@ exports.wordTrans = (text, dict, join = ' ') => {
 		const lowerCase = strip.toLowerCase();
 		if (!dict[lowerCase]) return word;
 		let change = word.toLowerCase().replace(lowerCase, dict[lowerCase]);
-		if (strip !== 'I' && strip.charAt(0).toUpperCase() === strip.charAt(0)) {
+		if (strip.charAt(0).toUpperCase() === strip.charAt(0)) {
 			change = change.replace(dict[lowerCase].charAt(0), dict[lowerCase].charAt(0).toUpperCase());
 		}
 		if (strip.length > 1 && strip.toUpperCase() === strip) change = change.toUpperCase();
