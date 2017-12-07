@@ -27,9 +27,8 @@ exports.regexTrans = (text, dict, flags = 'gi') => {
 	if (typeof dict !== 'object') throw new TypeError('dictionary must be an object.');
 	if (typeof flags !== 'string') throw new TypeError('flags must be a string.');
 	for (const expression of Object.keys(dict)) {
-		const replacement = dict[expression];
 		const regex = new RegExp(expression, flags);
-		text = text.replace(regex, replacement);
+		text = text.replace(regex, dict[expression]);
 	}
 	return text;
 };

@@ -81,6 +81,15 @@ test('regexTrans: should throw a TypeError on invalid dictionary', () => {
 	}
 });
 
+test('regexTrans: should throw a TypeError on invalid flags', () => {
+	try {
+		regexTrans('', {}, undefined);
+	} catch (err) {
+		expect(err.name).toBe('TypeError');
+		expect(err.message).toBe('flags must be a string.');
+	}
+});
+
 test('regexTrans: should work', () => {
 	const tested = regexTrans('abcd abd 123', { 'abc?d': 'efg', '[123]': 'number' });
 	expect(tested).toBe('efg efg numbernumbernumber');
