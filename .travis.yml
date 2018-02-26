@@ -1,8 +1,6 @@
 sudo: false
 language: node_js
 node_js:
-  - '8'
-install: npm install
-cache:
-  directories:
-    - node_modules
+  - '9'
+install: npm i -g eslint eslint-config-aqua eslint-plugin-json jest
+test: npm test
