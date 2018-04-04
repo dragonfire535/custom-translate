@@ -1,6 +1,6 @@
 {
 	"name": "custom-translate",
-	"version": "2.2.3",
+	"version": "2.2.4",
 	"description": "A simple module for replacing words, letters, or patterns in a string with others.",
 	"main": "index.js",
 	"scripts": {
@@ -23,21 +23,14 @@
 	"homepage": "https://github.com/dragonfire535/custom-translate#readme",
 	"devDependencies": {
 		"eslint": "^4.19.0",
-		"eslint-config-aqua": "^3.0.0",
+		"eslint-config-amber": "^1.0.0",
 		"eslint-plugin-json": "^1.2.0",
 		"jest": "^22.4.2"
 	},
 	"eslintConfig": {
-		"extends": "aqua",
+		"extends": "amber",
 		"plugins": [
 			"json"
-		],
-		"rules": {
-			"camelcase": "off",
-			"id-length": "off",
-			"no-await-in-loop": "off",
-			"no-console": "off",
-			"prefer-const": "error"
-		}
+		]
 	}
 }
