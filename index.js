@@ -4,7 +4,7 @@ exports.wordTrans = (text, dict, join = ' ') => {
 	if (typeof text !== 'string') throw new TypeError('text must be a string.');
 	if (typeof dict !== 'object') throw new TypeError('dictionary must be an object.');
 	return text.split(' ').map(word => {
-		const strip = word.replace(/[!@#$%^&*()`~=+[\]{};:",.<>?]|('s)$/g, '');
+		const strip = word.replace(/[!@#$%^&*()`~=+[\]{};:",.<>?]/g, '').replace(/(?:'s)$/, '');
 		const lowerCase = strip.toLowerCase();
 		if (!dict[lowerCase]) return word;
 		let change = word.toLowerCase().replace(lowerCase, dict[lowerCase]);

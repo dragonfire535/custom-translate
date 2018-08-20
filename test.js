@@ -30,6 +30,11 @@ test('wordTrans: should capitalize properly', () => {
 	expect(tested).toBe('That is a "Testing" of the casing. A TESTING.');
 });
 
+test('wordTrans: should replace instances of "\'s" at the end of words.', () => {
+	const tested = wordTrans('This is the test\'s be\'st friend. The test\'s.', { test: 'testing' });
+	expect(tested).toBe('This is the testing\'s be\'st friend. The testing\'s.');
+});
+
 test('wordTrans: join should work', () => {
 	const tested = wordTrans('This is a test string.', { test: 'tested', string: 'sentence' }, '/');
 	expect(tested).toBe('This/is/a/tested/sentence.');
