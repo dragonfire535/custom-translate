@@ -1,10 +1,10 @@
 {
 	"name": "custom-translate",
-	"version": "2.2.7",
+	"version": "2.2.8",
 	"description": "A simple module for replacing words, letters, or patterns in a string with others.",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm run lint && jest",
+		"test": "jest",
 		"lint": "eslint . --ext .js --ext .json"
 	},
 	"repository": {
@@ -27,13 +27,21 @@
 	"devDependencies": {
 		"eslint": "^5.6.1",
 		"eslint-config-amber": "^2.0.0",
+		"eslint-plugin-jest": "^21.24.0",
 		"eslint-plugin-json": "^1.2.1",
 		"jest": "^23.6.0"
 	},
 	"eslintConfig": {
-		"extends": "amber",
+		"extends": [
+			"amber",
+			"plugin:jest/recommended"
+		],
 		"plugins": [
-			"json"
-		]
+			"json",
+			"jest"
+		],
+		"env": {
+			"jest/globals": true
+		}
 	}
 }
