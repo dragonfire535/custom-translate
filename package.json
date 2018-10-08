@@ -3,6 +3,7 @@
 	"version": "2.2.8",
 	"description": "A simple module for replacing words, letters, or patterns in a string with others.",
 	"main": "index.js",
+	"typings": "typings/index.d.ts",
 	"scripts": {
 		"test": "jest",
 		"lint": "eslint . --ext .js --ext .json"
